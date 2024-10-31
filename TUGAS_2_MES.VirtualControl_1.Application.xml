@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="4.3.0.0" runtimeid="3.5.19.0" libversion="4.3.0.0" compiler="3.5.19.10" lmm="3.5.19.10" profile="ctrlX PLC 1.20.1+" settings="SupportOPCUA, IncludeExecutables, XmlIncludeComments, XmlIncludeExecutables, LayoutCalculator=CompatibilityClientSideLayoutCalculator" />
+    <ProjectInfo name="TUGAS_2_MES" devicename="VirtualControl_1" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BIT_X_0" size="1" swapsize="0" typeclass="Bool" iecname="BIT" bitoffset="0" />
+    <TypeSimple name="T_BIT_X_1" size="1" swapsize="0" typeclass="Bool" iecname="BIT" bitoffset="1" />
+    <TypeSimple name="T_BIT_X_2" size="1" swapsize="0" typeclass="Bool" iecname="BIT" bitoffset="2" />
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="PEMBALIK_MOTOR_LANGSUNG">
+        <Node name="CCW" type="T_BIT_X_1" access="Read" directaddress="%IX1.1" />
+        <Node name="CW" type="T_BIT_X_0" access="Read" directaddress="%IX1.0" />
+        <Node name="LED_CCW" type="T_BIT_X_1" access="ReadWrite" directaddress="%QX1.1" />
+        <Node name="LED_CW" type="T_BIT_X_0" access="ReadWrite" directaddress="%QX1.0" />
+        <Node name="LED_STOP" type="T_BIT_X_2" access="ReadWrite" directaddress="%QX1.2" />
+        <Node name="MI_1" type="T_BIT_X_0" access="ReadWrite" directaddress="%MX1.0" />
+        <Node name="MI_2" type="T_BIT_X_1" access="ReadWrite" directaddress="%MX1.1" />
+        <Node name="MI_3" type="T_BIT_X_2" access="ReadWrite" directaddress="%MX1.2" />
+        <Node name="STOP" type="T_BIT_X_2" access="Read" directaddress="%IX1.2" />
+      </Node>
+      <Node name="PEMBALIK_MOTOR_TIDAK_LANGSUNG">
+        <Node name="CCW" type="T_BIT_X_2" access="Read" directaddress="%IX0.2" />
+        <Node name="CW" type="T_BIT_X_1" access="Read" directaddress="%IX0.1" />
+        <Node name="LED_CCW" type="T_BIT_X_2" access="ReadWrite" directaddress="%QX0.2" />
+        <Node name="LED_CW" type="T_BIT_X_1" access="ReadWrite" directaddress="%QX0.1" />
+        <Node name="LED_STOP" type="T_BIT_X_0" access="ReadWrite" directaddress="%QX0.0" />
+        <Node name="MI_1" type="T_BIT_X_0" access="ReadWrite" directaddress="%MX0.0" />
+        <Node name="MI_2" type="T_BIT_X_1" access="ReadWrite" directaddress="%MX0.1" />
+        <Node name="MI_3" type="T_BIT_X_2" access="ReadWrite" directaddress="%MX0.2" />
+        <Node name="STOP" type="T_BIT_X_0" access="Read" directaddress="%IX0.0" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
